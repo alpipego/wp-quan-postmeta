@@ -1,4 +1,7 @@
 <?php
+
+namespace QuanDigital\PostMeta;
+
 /**
  * Plugin Name: Quan Post Meta
  * Plugin URI: http://www.quandigital.com/
@@ -7,17 +10,13 @@
  * License: MIT
  */
 
-    defined( 'ABSPATH' ) or die();
+defined('ABSPATH') or die();
+include ABSPATH . '../../vendor/autoload.php';
 
-    if (!class_exists('acf')) {
-        add_action('admin_init', function() {
-            deactivate_plugins( plugin_basename( __FILE__ ) );
-            add_action('admin_notices', function() {
-                echo '<div class="error"><p>Please activate <a href="https://wordpress.org/plugins/advanced-custom-fields/" target="_blank">Advanced Custom Fields</a> first.</p></div>';
-            });
-        });
-    } else {
-        include 'PostMeta.class.php';
-        new \Quan\PostMeta();
-    }
+use QuanDigital\WpLib\Autoload;
+
+new Autoload(__DIR__, __NAMESPACE__);
+
+// create the plugin, pass the importer as object
+new PostMetaPlugin(__FILE__, $import);
     
