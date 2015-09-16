@@ -84,6 +84,20 @@
                 "operator": "==",
                 "value": "post"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "quan_jobs"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "landing-page"
+            }
         ]
     ],
     "menu_order": 0,
@@ -94,5 +108,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1441627323
+    "modified": 1442333074
 }
