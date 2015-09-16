@@ -25,14 +25,14 @@ class Convert
 
     public function convertTitle($postId)
     {
-        if (!empty(trim(\get_post_meta($postId, 'quan_meta_title', true)))) {
+        if (empty(trim(\get_post_meta($postId, 'quan_meta_title', true)))) {
             \update_post_meta($postId, 'quan_meta_title', \get_post_meta($postId, '_headspace_page_title', true));
         }
     }
 
     public function convertDescription($postId)
     {
-        if (!empty(trim(\get_post_meta($postId, 'quan_meta_description', true)))) {
+        if (empty(trim(\get_post_meta($postId, 'quan_meta_description', true)))) {
             $description = strlen(\get_post_meta($postId, '_headspace_description', true)) > 1 ? \get_post_meta($postId, '_headspace_description', true) : \get_field('quan_excerpt');
             \update_post_meta($postId, 'quan_meta_description', $description);
         }
@@ -40,7 +40,7 @@ class Convert
 
     public function convertRobots($postId)
     {
-        if (!\get_post_meta($postId, 'quan_meta_robots', true)) {
+        if (\get_post_meta($postId, 'quan_meta_robots', true)) {
             $robots = [];
             foreach (['nofollow', 'noarchive', 'noindex',] as $botDirective) {
                 $hsDirective = \get_post_meta($postId, '_headspace_' . $botDirective, true);
