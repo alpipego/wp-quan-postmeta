@@ -2,18 +2,17 @@
 
 namespace QuanDigital\PostMeta;
 
+use QuanDigital\WpLib\Autoload;
+
 /**
  * Plugin Name: Quan Post Meta
- * Plugin URI: http://www.quandigital.com/
+ * Plugin URI: https://github.com/quandigital/wp-quan-postmeta
+ * Author: Quan Digital GmbH
+ * Author URI: http://www.quandigital.com/
  * Description: Adds meta information to posts (requires acf)
- * Version: 1.0.0
+ * Version: 1.0.1
  * License: MIT
  */
-
-defined('ABSPATH') or die();
-include ABSPATH . '../../vendor/autoload.php';
-
-use QuanDigital\WpLib\Autoload;
 
 new Autoload(__DIR__, __NAMESPACE__);
 
