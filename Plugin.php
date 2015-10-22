@@ -23,10 +23,10 @@ class Plugin extends Boilerplate
     function outputMeta()
     {
         add_action('wp_head', function() {
-            echo sprintf('<meta name="title" content="%s">', $this->getTitle());
+            echo sprintf('<title>%s</title>', $this->getTitle());
 
             if ($description = $this->getDescription()) {
-                echo sprintf('<meta name="description" content="%s">', $description);
+                echo sprintf('<meta name="Description" content="%s">', $description);
             }
 
             if ($robots = $this->getRobots()) {
@@ -37,22 +37,23 @@ class Plugin extends Boilerplate
 
     function getTitle()
     {
-        return !empty($title = trim(\get_post_meta(\get_the_id(),'quan_meta_title', true))) ? $title : \get_the_title();
+        return (new Title())->title;
     }
 
     function getDescription()
     {
-        return !empty($description = trim(\get_post_meta(\get_the_id(),'quan_meta_description', true))) ? $description : false;
+        return (new Description())->description;
     }
 
     function getRobots()
     {
-        $robots = \get_post_meta(\get_the_id(),'quan_meta_robots', true);
-        
-        if (!empty($robots)) {
-            return implode(',', $robots);
+        if (!is_author()) {    
+            $robots = \get_post_meta(\get_the_id(),'quan_meta_robots', true);
+            
+            if (!empty($robots)) {
+                return implode(',', $robots);
+            }
         }
-
         return false;
     }
 }
