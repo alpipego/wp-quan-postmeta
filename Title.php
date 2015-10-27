@@ -8,10 +8,10 @@ class Title
 
     function __construct()
     {
-        if (\is_archive() || is_home()) {
-            $this->title = $this->getArchive();
-        } else if (\is_author()) {
+        if (\is_author()) {
             $this->title = $this->getProfile();
+        } else if (\is_archive() || is_home()) {
+            $this->title = $this->getArchive();
         } else {
             $this->title = $this->getSingle();
         }
