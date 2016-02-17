@@ -25,13 +25,8 @@ class Title
     function getProfile()
     {
         $user = \get_user_by('slug', \get_query_var('author_name'));
-<<<<<<< HEAD
-        
-        return $user->data->display_name . ' - ' . 'Quan Digital GmbH';
-=======
 
         return $user->data->display_name . ' - ' . get_bloginfo('title');
->>>>>>> dev
     }
 
     function getArchive()
@@ -42,8 +37,4 @@ class Title
             return !empty($title = trim(\get_post_meta($page->ID, 'quan_meta_title', true))) ? $title : '';
         }
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> dev
