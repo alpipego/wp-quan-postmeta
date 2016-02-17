@@ -17,7 +17,7 @@ class Plugin extends Boilerplate
 
     public function convertHeadspace()
     {
-        new Convert();  
+        new Convert();
     }
 
     function outputMeta()
@@ -32,7 +32,16 @@ class Plugin extends Boilerplate
             if ($robots = $this->getRobots()) {
                 echo sprintf('<meta name="robots" content="%s">', $robots);
             }
+            $this->getAlternateLanguages();
         });
+
+        $this->getLanguage();
+    }
+
+    public function addAcfJsonLoadPoint($paths) {
+        $paths[] = __DIR__ . '/acf-json';
+
+        return $paths;
     }
 
     function getTitle()
@@ -47,13 +56,43 @@ class Plugin extends Boilerplate
 
     function getRobots()
     {
-        if (!is_author()) {    
+        if (!is_author()) {
             $robots = \get_post_meta(\get_the_id(),'quan_meta_robots', true);
-            
+
             if (!empty($robots)) {
+
                 return implode(',', $robots);
             }
         }
+
         return false;
     }
+
+    private function getLanguage()
+    {
+        add_filter('language_attributes', function($output, $doctype) {
+            $lang = explode('_', get_option('WPLANG'));
+            $lang = !empty($postLang = trim(\get_post_meta(\get_the_id(), 'quan_meta_language', true))) ? $postLang : $lang[0];
+
+            $output = 'lang="' . $lang . '"';
+
+            if ($doctype === 'xhtml') {
+                $output .= ' xml:lang="' . $lang . '"';
+            }
+
+            return $output;
+        }, 20, 2);
+    }
+
+    private function getAlternateLanguages()
+    {
+        if (have_rows('quan_meta_hreflang')) {
+            while (have_rows('quan_meta_hreflang')) {
+                the_row();
+
+                echo sprintf('<link rel="alternate" href="%s" hreflang="%s" />', get_sub_field('quan_meta_hreflang_url'), get_sub_field('quan_meta_hreflang_code'));
+            }
+        }
+    }
+
 }

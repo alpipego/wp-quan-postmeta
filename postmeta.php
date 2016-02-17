@@ -10,11 +10,10 @@ use QuanDigital\WpLib\Autoload;
  * Author: Quan Digital GmbH
  * Author URI: http://www.quandigital.com/
  * Description: Adds meta information to posts (requires acf)
- * Version: 1.0.4
+ * Version: 1.1.0
  * License: MIT
  */
 
 new Autoload(__DIR__, __NAMESPACE__);
 
 new Plugin(__FILE__);
-    

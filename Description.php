@@ -19,7 +19,7 @@ class Description
 
     function getSingle()
     {
-        return !empty($description = trim(\get_post_meta(\get_the_id(), 'quan_meta_description', true))) ? $description : false;        
+        return !empty($description = trim(\get_post_meta(\get_the_id(), 'quan_meta_description', true))) ? $description : false;
     }
 
     function getProfile()
@@ -32,6 +32,8 @@ class Description
     {
         $page = get_page_by_path($_SERVER['REQUEST_URI']);
 
-        return !empty($description = trim(\get_post_meta($page->ID, 'quan_meta_description', true))) ? $description : false;
+        if (!is_null($page)) {
+            return !empty($description = trim(\get_post_meta($page->ID, 'quan_meta_description', true))) ? $description : false;
+        }
     }
 }
