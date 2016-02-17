@@ -10,7 +10,7 @@ use QuanDigital\WpLib\Autoload;
  * Author: Quan Digital GmbH
  * Author URI: http://www.quandigital.com/
  * Description: Adds meta information to posts (requires acf)
- * Version: 1.1.1
+ * Version: 1.1.2
  * License: MIT
  */
 
