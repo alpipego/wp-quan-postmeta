@@ -11,7 +11,7 @@ use QuanDigital\WpLib\Autoload;
  * Author URI: http://www.quandigital.com/
  * Description: Adds meta information to posts (requires acf)
  * Version: 1.1.3
- * License: MIT
+ * License: GPLv2 (or later)
  */
 
 new Autoload(__DIR__, __NAMESPACE__);
