@@ -90,7 +90,7 @@ class Plugin extends Boilerplate
             while (have_rows('quan_meta_hreflang')) {
                 the_row();
 
-                echo sprintf('<link rel="alternate" href="%s" hreflang="%s" />', get_sub_field('quan_meta_hreflang_url'), get_sub_field('quan_meta_hreflang_code'));
+                echo sprintf('<link rel="alternate" href="%s" hreflang="%s" />', get_permalink(get_sub_field('quan_meta_hreflang_url')), get_sub_field('quan_meta_hreflang_code'));
             }
         }
     }
