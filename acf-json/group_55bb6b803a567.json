@@ -1,176 +1,179 @@
-[
-    {
-        "key": "group_55bb6b803a567",
-        "title": "Meta",
-        "fields": [
-            {
-                "key": "field_558414bbc6e12",
-                "label": "Titel",
-                "name": "quan_meta_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "formatting": "html",
-                "maxlength": "",
-                "readonly": 0,
-                "disabled": 0
+{
+    "key": "group_55bb6b803a567",
+    "title": "Meta",
+    "fields": [
+        {
+            "key": "field_558414bbc6e12",
+            "label": "Titel",
+            "name": "quan_meta_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            {
-                "key": "field_558414d0c6e13",
-                "label": "Beschreibung",
-                "name": "quan_meta_description",
-                "type": "textarea",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": "",
-                "readonly": 0,
-                "disabled": 0
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "formatting": "html",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_558414d0c6e13",
+            "label": "Beschreibung",
+            "name": "quan_meta_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            {
-                "key": "field_55ed79a87cd6b",
-                "label": "Meta Robots",
-                "name": "quan_meta_robots",
-                "type": "checkbox",
-                "instructions": "Check the appropriate boxes if you want these on your resulting document.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "choices": {
-                    "noindex": "noindex",
-                    "nofollow": "nofollow",
-                    "noarchive": "noarchive"
-                },
-                "default_value": [],
-                "layout": "vertical",
-                "toggle": 1
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_55ed79a87cd6b",
+            "label": "Meta Robots",
+            "name": "quan_meta_robots",
+            "type": "checkbox",
+            "instructions": "Check the appropriate boxes if you want these on your resulting document.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
             },
-            {
-                "key": "field_56c38cf96cc76",
-                "label": "Language",
-                "name": "quan_meta_language",
-                "type": "text",
-                "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"de\" or \"en\") ",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": 2,
-                "readonly": 0,
-                "disabled": 0
+            "choices": {
+                "noindex": "noindex",
+                "nofollow": "nofollow",
+                "noarchive": "noarchive"
             },
-            {
-                "key": "field_56c3907ce7a83",
-                "label": "hreflang",
-                "name": "quan_meta_hreflang",
-                "type": "repeater",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": "",
-                "max": "",
-                "layout": "table",
-                "button_label": "Add Row",
-                "sub_fields": [
-                    {
-                        "key": "field_56c38d656cc77",
-                        "label": "hreflang",
-                        "name": "quan_meta_hreflang_code",
-                        "type": "text",
-                        "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"en\" or \"de\")  optionally add a regional <a href=\"https:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\" target=\"_blank\">ISO 3166-1 alpha-2 Country Code<\/a> (e.g. \"en-GB\" or \"de-AT\") seperated by a hyphen.",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": 40,
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": "",
-                        "readonly": 0,
-                        "disabled": 0
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 1
+        },
+        {
+            "key": "field_56c38cf96cc76",
+            "label": "Language",
+            "name": "quan_meta_language",
+            "type": "text",
+            "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"de\" or \"en\") ",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 2,
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_56c3907ce7a83",
+            "label": "hreflang",
+            "name": "quan_meta_hreflang",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": "",
+            "max": "",
+            "layout": "table",
+            "button_label": "Add Language",
+            "sub_fields": [
+                {
+                    "key": "field_56c38d656cc77",
+                    "label": "hreflang",
+                    "name": "quan_meta_hreflang_code",
+                    "type": "text",
+                    "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"en\" or \"de\")  optionally add a regional <a href=\"https:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\" target=\"_blank\">ISO 3166-1 alpha-2 Country Code<\/a> (e.g. \"en-GB\" or \"de-AT\") seperated by a hyphen.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 40,
+                        "class": "",
+                        "id": ""
                     },
-                    {
-                        "key": "field_56c38ec16cc78",
-                        "label": "hreflang URL",
-                        "name": "quan_meta_hreflang_url",
-                        "type": "url",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": 60,
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": ""
-                    }
-                ]
-            }
-        ],
-        "location": [
-            [
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": "",
+                    "readonly": 0,
+                    "disabled": 0
+                },
                 {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "page"
-                }
-            ],
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "post"
+                    "key": "field_56c38ec16cc78",
+                    "label": "hreflang URL",
+                    "name": "quan_meta_hreflang_url",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": 60,
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [],
+                    "taxonomy": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
                 }
             ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
         ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": 1,
-        "description": ""
-    }
-]
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1462887991
+}
