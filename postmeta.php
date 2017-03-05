@@ -18,7 +18,7 @@ use Composer\Autoload\ClassLoader;
  * Author: Quan Digital GmbH
  * Author URI: http://www.quandigital.com/
  * Description: Adds meta information to posts (requires acf)
- * Version: 1.1.3
+ * Version: 1.2.0
  * License: MIT
  */
 
