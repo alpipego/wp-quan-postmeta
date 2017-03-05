@@ -1,8 +1,16 @@
 <?php
 
-namespace QuanDigital\PostMeta;
+namespace Alpipego\PostMeta;
 
-use QuanDigital\WpLib\Autoload;
+use Alpipego\PostMeta\Convert\Converter;
+use Alpipego\PostMeta\Convert\Headspace;
+use Alpipego\PostMeta\Convert\Version1to2;
+use Alpipego\PostMeta\Meta\Description;
+use Alpipego\PostMeta\Meta\Languages;
+use Alpipego\PostMeta\Meta\Robots;
+use Alpipego\PostMeta\Meta\Title;
+use Alpipego\WpLib\DIContainer;
+use Composer\Autoload\ClassLoader;
 
 /**
  * Plugin Name: Quan Post Meta
@@ -14,6 +22,45 @@ use QuanDigital\WpLib\Autoload;
  * License: MIT
  */
 
-new Autoload(__DIR__, __NAMESPACE__);
+$loader = new ClassLoader();
+// register classes with namespaces
+$loader->addPsr4( 'Alpipego\\PostMeta\\', __DIR__ . '/src' );
 
-new Plugin(__FILE__);
+// activate the autoloader
+$loader->register();
+
+$c = new DIContainer();
+
+$c['postmeta'] = function ( $c ) {
+	return new Plugin( __FILE__, $c );
+};
+
+$c['convert'] = function ( $c ) {
+	return new Converter( $c );
+};
+
+$c['convert_headspace'] = function () {
+	return new Headspace();
+};
+
+$c['convert_version1to2'] = function () {
+	return new Version1to2();
+};
+
+$c['meta_title'] = function () {
+	return new Title();
+};
+
+$c['meta_description'] = function () {
+	return new Description();
+};
+$c['meta_robots']      = function () {
+	return new Robots();
+};
+$c['meta_languages']   = function () {
+	return new Languages();
+};
+
+add_action( 'plugins_loaded', function () use ( $c ) {
+	$c->run();
+} );

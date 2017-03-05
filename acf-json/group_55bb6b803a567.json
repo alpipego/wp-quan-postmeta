@@ -5,7 +5,7 @@
         {
             "key": "field_558414bbc6e12",
             "label": "Titel",
-            "name": "quan_meta_title",
+            "name": "apm_meta_title",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -19,15 +19,12 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "formatting": "html",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": ""
         },
         {
             "key": "field_558414d0c6e13",
             "label": "Beschreibung",
-            "name": "quan_meta_description",
+            "name": "apm_meta_description",
             "type": "textarea",
             "instructions": "",
             "required": 0,
@@ -41,14 +38,12 @@
             "placeholder": "",
             "maxlength": "",
             "rows": "",
-            "new_lines": "",
-            "readonly": 0,
-            "disabled": 0
+            "new_lines": ""
         },
         {
             "key": "field_55ed79a87cd6b",
             "label": "Meta Robots",
-            "name": "quan_meta_robots",
+            "name": "apm_meta_robots",
             "type": "checkbox",
             "instructions": "Check the appropriate boxes if you want these on your resulting document.",
             "required": 0,
@@ -63,16 +58,19 @@
                 "nofollow": "nofollow",
                 "noarchive": "noarchive"
             },
+            "allow_custom": 0,
+            "save_custom": 0,
             "default_value": [],
             "layout": "vertical",
-            "toggle": 1
+            "toggle": 1,
+            "return_format": "value"
         },
         {
             "key": "field_56c38cf96cc76",
             "label": "Language",
-            "name": "quan_meta_language",
+            "name": "apm_meta_language",
             "type": "text",
-            "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"de\" or \"en\") ",
+            "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"de\" or \"en\")",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -84,14 +82,12 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": 2,
-            "readonly": 0,
-            "disabled": 0
+            "maxlength": 2
         },
         {
             "key": "field_56c3907ce7a83",
             "label": "hreflang",
-            "name": "quan_meta_hreflang",
+            "name": "apm_meta_hreflang",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -102,21 +98,21 @@
                 "id": ""
             },
             "collapsed": "",
-            "min": "",
-            "max": "",
+            "min": 0,
+            "max": 0,
             "layout": "table",
             "button_label": "Add Language",
             "sub_fields": [
                 {
                     "key": "field_56c38d656cc77",
                     "label": "hreflang",
-                    "name": "quan_meta_hreflang_code",
+                    "name": "code",
                     "type": "text",
                     "instructions": "Two Character <a href=\"https:\/\/en.wikipedia.org\/wiki\/List_of_ISO_639-1_codes\" target=\"_blank\">ISO 639-1 Language Code<\/a> (e.g. \"en\" or \"de\")  optionally add a regional <a href=\"https:\/\/en.wikipedia.org\/wiki\/ISO_3166-1_alpha-2\" target=\"_blank\">ISO 3166-1 alpha-2 Country Code<\/a> (e.g. \"en-GB\" or \"de-AT\") seperated by a hyphen.",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 40,
+                        "width": "40",
                         "class": "",
                         "id": ""
                     },
@@ -124,20 +120,18 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": "",
-                    "readonly": 0,
-                    "disabled": 0
+                    "maxlength": ""
                 },
                 {
                     "key": "field_56c38ec16cc78",
                     "label": "hreflang URL",
-                    "name": "quan_meta_hreflang_url",
+                    "name": "url",
                     "type": "post_object",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": 60,
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
@@ -175,5 +169,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1462887991
+    "modified": 1488587059
 }
