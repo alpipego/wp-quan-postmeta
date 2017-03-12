@@ -13,7 +13,6 @@ class Plugin extends AcfBoilerplate {
 
 	public function __construct( string $file, $container ) {
 		parent::__construct( $file );
-		$this->activation( [ $container['convert'], 'convert' ] );
 
 		$this->c = $container;
 	}

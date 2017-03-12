@@ -47,6 +47,10 @@ $c['convert_version1to2'] = function () {
 	return new Version1to2();
 };
 
+\register_activation_hook( __FILE__, function () use ( $c ) {
+	call_user_func( [ $c['convert'], 'convert' ] );
+} );
+
 $c['meta_title'] = function () {
 	return new Title();
 };
